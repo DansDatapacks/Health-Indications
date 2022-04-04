@@ -1,0 +1,35 @@
+{
+	"pack": {
+		"pack_format": 9,
+		"description": [
+			{
+				"text": "See Player and Mob Health! ",
+				"color": "gray"
+			},
+			{
+				"text": "v2.1 ",
+				"color": "dark_green"
+			},
+			{
+				"text": "[1.18+] ",
+				"color": "green"
+			},
+			{
+				"text": "(",
+				"color": "dark_gray"
+			},
+			{
+				"text": "By ",
+				"color": "gray"
+			},
+			{
+				"text": "DanMizu",
+				"color": "aqua"
+			},
+			{
+				"text": ")",
+				"color": "dark_gray"
+			}
+		]
+	}
+}

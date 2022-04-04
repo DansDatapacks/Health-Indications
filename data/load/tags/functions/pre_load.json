@@ -1,0 +1,6 @@
+{
+    "values": [
+        "sourcecraft.5:on_event/on_pre_load",
+        "healthindications.2:on_event/on_pre_load"
+    ]
+}

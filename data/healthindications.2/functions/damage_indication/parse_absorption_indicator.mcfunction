@@ -1,0 +1,10 @@
+# parse absorption indicator
+
+#set symbol
+execute if score #healthindications.absorption_difference sourcecraft.temp matches 1.. run data modify storage healthindications damage_indication.symbol set value '"+"'
+execute if score #healthindications.absorption_difference sourcecraft.temp matches ..0 run data modify storage healthindications damage_indication.symbol set value ''
+
+#parse
+execute if score #healthindications.option.damage_indication.no_symbol sourcecraft.data matches 1 at @e[type=minecraft:marker,tag=sourcecraft.air_detector] run data modify block ~ ~ ~ Text1 set value '[{"text":"","color":"yellow"},{"nbt":"damage_indication.symbol","storage":"healthindications","interpret":true},{"score":{"name":"#healthindications.absorption_difference","objective":"sourcecraft.temp"}}]'
+execute unless score #healthindications.option.damage_indication.no_symbol sourcecraft.data matches 1 if score #healthindications.option.damage_indication.custom_texture sourcecraft.data matches 1 at @e[type=minecraft:marker,tag=sourcecraft.air_detector] run data modify block ~ ~ ~ Text1 set value '[{"text":"","color":"yellow"},{"nbt":"damage_indication.symbol","storage":"healthindications","interpret":true},{"score":{"name":"#healthindications.absorption_difference","objective":"sourcecraft.temp"}},{"nbt":"damage_indication.icon.absorption.custom","storage":"healthindications","interpret":true,"color":"white"}]'
+execute unless score #healthindications.option.damage_indication.no_symbol sourcecraft.data matches 1 unless score #healthindications.option.damage_indication.custom_texture sourcecraft.data matches 1 at @e[type=minecraft:marker,tag=sourcecraft.air_detector] run data modify block ~ ~ ~ Text1 set value '[{"text":"","color":"yellow"},{"nbt":"damage_indication.symbol","storage":"healthindications","interpret":true},{"score":{"name":"#healthindications.absorption_difference","objective":"sourcecraft.temp"}},{"nbt":"damage_indication.icon.health.default","storage":"healthindications","interpret":true}]'
