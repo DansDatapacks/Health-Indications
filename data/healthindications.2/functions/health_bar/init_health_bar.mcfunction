@@ -23,5 +23,3 @@ execute as @e[type=minecraft:armor_stand,tag=healthindications.health_bar_init] 
 
 #reset tags
 tag @e[type=minecraft:armor_stand,tag=healthindications.health_bar_init] remove healthindications.health_bar_init
-
-say init
