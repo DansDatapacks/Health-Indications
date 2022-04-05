@@ -18,7 +18,7 @@ execute unless score #healthindications.current_absorption sourcecraft.temp matc
 function healthindications.2:health_bar/bar/simple/generate_string
 
 #add absorption hearts
-execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" "},{"score":{"name":"#healthindications.current_absorption","objective":"sourcecraft.temp"}},{"nbt":"health_bar.icon.absorption.default","storage":"healthindications","interpret":true}]'}
+execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" "},{"score":{"name":"#healthindications.current_absorption","objective":"sourcecraft.temp"}},{"nbt":"icon.health_bar.absorption","storage":"healthindications","interpret":true}]'}
 
 ##modules
 #add extra info set by other packs

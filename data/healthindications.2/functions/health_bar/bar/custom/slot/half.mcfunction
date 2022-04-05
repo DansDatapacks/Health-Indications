@@ -1,10 +1,10 @@
 # half slot
 
 #left
-execute if score #healthindications.loop sourcecraft.temp matches 10 run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":"true"},{"nbt":"health_bar.icon.custom.half_left","storage":"healthindications","interpret":true}]'}
+execute if score #healthindications.loop sourcecraft.temp matches 10 run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":"true"},{"font":"healthindications:health_bar","translate":"icon.healthindications.health_bar.half_left"}]'}
 
 #middle
-execute if score #healthindications.loop sourcecraft.temp matches 2..9 run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":"true"},{"nbt":"health_bar.icon.custom.half_middle","storage":"healthindications","interpret":true}]'}
+execute if score #healthindications.loop sourcecraft.temp matches 2..9 run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":"true"},{"font":"healthindications:health_bar","translate":"icon.healthindications.health_bar.half_middle"}]'}
 
 #right
-execute if score #healthindications.loop sourcecraft.temp matches 1 run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":"true"},{"nbt":"health_bar.icon.custom.half_right","storage":"healthindications","interpret":true}]'}
+execute if score #healthindications.loop sourcecraft.temp matches 1 run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":"true"},{"font":"healthindications:health_bar","translate":"icon.healthindications.health_bar.half_right"}]'}
