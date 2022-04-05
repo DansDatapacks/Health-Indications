@@ -12,7 +12,7 @@ scoreboard players set #healthindications.loop sourcecraft.temp 10
 function healthindications.2:health_bar/bar/custom/generate_string
 
 #add absorption hearts
-execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" "},{"score":{"name":"#healthindications.current_absorption","objective":"sourcecraft.temp"}},{"font":"healthindications:heart","translate":"icon.healthindications.damage_indication.absorption_heart","color":"white"}]'}
+execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" "},{"score":{"name":"#healthindications.current_absorption","objective":"sourcecraft.temp"}},{"font":"healthindications:health_bar","translate":"icon.healthindications.health_bar.absorption_heart","color":"white"}]'}
 
 ##modules
 #add space
