@@ -1,16 +1,12 @@
 <p align="center">
-  <a align="center" href='#'/>
-    <img src="assets/logo.png" width="200rem" />
+  <a style="text-decoration:none;" align="center" href='#'/>
+    <img src="assets/logo.png" width="400rem" />
   </a>
 </p>
 
 <p align="center">
     <strong>See Player and Mob Health!</strong>
 </p>
-
-<hr>
-
-<br/>
 
 <p align="center">
     <a style="text-decoration:none;" href="https://github.com/DansDatapacks/Health-Indications/issues" target="_blank">
@@ -162,12 +158,8 @@ You can toggle features of the pack by running the command:
 </p>
 
 <p>
- <code>
- /function #healthindications:options
- </code>
+ <code>/function #healthindications:options</code>
 </p>
-
-<br/>
 
 <hr>
 
