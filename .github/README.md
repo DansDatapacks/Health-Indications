@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    <strong>See Player and Mob Health!</strong>
+    <b>See Player and Mob Health!</b>
 </p>
 
 <p align="center">
