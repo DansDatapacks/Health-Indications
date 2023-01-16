@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/template_skull",
+  "overrides": [
+      { "predicate": { "custom_model_data": 4150000}, "model": "healthindications:item/flat_player_head"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "healthindications:gui/icon/status_effect.png",
+			"ascent": 8,
+            "height": 9,
+            "chars": [
+                "\ue20C\ue20D\ue20E\ue20F\ue210\ue211\ue212\ue213\ue214\ue215\ue216\ue217\ue218"
+            ]
+        }
+    ]
+}

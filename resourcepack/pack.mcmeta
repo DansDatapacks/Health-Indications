@@ -1,0 +1,27 @@
+{
+	"pack": {
+		"pack_format": 9,
+		"description": [
+			{
+				"text": "Health Indications Assets ",
+				"color": "gray"
+			},
+			{
+				"text": "v2.2 ",
+				"color": "dark_green"
+			},
+			{
+				"text": "[1.19+] ",
+				"color": "green"
+			},
+			{
+				"text": "By ",
+				"color": "gray"
+			},
+			{
+				"text": "DanMizu",
+				"color": "aqua"
+			}
+		]
+	}
+}

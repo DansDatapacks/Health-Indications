@@ -1,2 +1,6 @@
-
+# Builds
+/builds
 *.zip
+
+# MacOS
+.DS_Store
