@@ -28,8 +28,8 @@ scoreboard players set #2 sourcecraft.data 2
 execute unless score #healthindications.option.damage_indication.toggle sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.toggle sourcecraft.data 1
 execute unless score #healthindications.option.health_bar.toggle sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.toggle sourcecraft.data 1
 execute unless score #healthindications.option.damage_indication.affect_players sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.affect_players sourcecraft.data 1
-execute unless score #healthindications.option.damage_indication.better_sync sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.better_sync sourcecraft.data 1
-execute unless score #healthindications.option.damage_indication.dont_sync_ridables sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.dont_sync_ridables sourcecraft.data 1
+execute unless score #healthindications.option.health_bar.better_sync sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.better_sync sourcecraft.data 1
+execute unless score #healthindications.option.health_bar.dont_sync_ridables sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.dont_sync_ridables sourcecraft.data 1
 
 #start loops
 function healthindications.2:loop/per_tick
