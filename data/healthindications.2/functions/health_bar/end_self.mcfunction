@@ -1,8 +1,5 @@
 # end health bar executed as health bars
 
-#get health bar ID
-#scoreboard players operation #healthindications.health_bar_ID sourcecraft.temp = @s healthindications.health_bar.ID
-
 #find matching player (if they were in creative/spectator)
 execute as @a if score @s sourcecraft.ID = #healthindications.health_bar_ID sourcecraft.temp run tag @s add healthindications.found_entity
 

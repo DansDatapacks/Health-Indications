@@ -1,13 +1,7 @@
 # applies upward motion to damage indicators
 
-#init gravity
-execute unless score @s healthindications.damage_indicator.gravity matches 0.. run scoreboard players set @s healthindications.damage_indicator.gravity 8 
+# apply transform to damage indicators
+execute as @e[type=minecraft:text_display,tag=healthindications.damage_indicator.apply_motion] run data merge entity @s {interpolation_duration:30,start_interpolation:-1,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1.5f,0f],scale:[1f,1f,1f]}}
 
-#get current Y pos
-execute store result score #PosY sourcecraft.temp run data get entity @s Pos[1] 32
-
-#move upwards
-execute store result entity @s Pos[1] double .03125 run scoreboard players operation #PosY sourcecraft.temp += @s healthindications.damage_indicator.gravity
-
-#move slower each time
-execute if score @s healthindications.damage_indicator.gravity matches 2.. run scoreboard players remove @s healthindications.damage_indicator.gravity 1
+# remove tag
+tag @e[type=minecraft:text_display,tag=healthindications.damage_indicator.apply_motion] remove healthindications.damage_indicator.apply_motion
