@@ -24,7 +24,7 @@ data modify storage healthindications icon.damage_indication.absorption_heart se
 scoreboard players set #3 sourcecraft.data 3
 scoreboard players set #2 sourcecraft.data 2
 
-#preset settings
+#default options
 execute unless score #healthindications.option.damage_indication.toggle sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.toggle sourcecraft.data 1
 execute unless score #healthindications.option.health_bar.toggle sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.toggle sourcecraft.data 1
 execute unless score #healthindications.option.damage_indication.affect_players sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.affect_players sourcecraft.data 1
