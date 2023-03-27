@@ -27,9 +27,13 @@ scoreboard players set #2 sourcecraft.data 2
 #default options
 execute unless score #healthindications.option.damage_indication.toggle sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.toggle sourcecraft.data 1
 execute unless score #healthindications.option.damage_indication.affect_players sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.affect_players sourcecraft.data 1
+execute unless score #healthindications.option.damage_indication.custom_texture sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.damage_indication.custom_texture sourcecraft.data 1
+
 execute unless score #healthindications.option.health_bar.toggle sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.toggle sourcecraft.data 1
 execute unless score #healthindications.option.health_bar.affect_players sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.affect_players sourcecraft.data 1
 execute unless score #healthindications.option.health_bar.better_sync sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.better_sync sourcecraft.data 1
+execute unless score #healthindications.option.health_bar.custom_texture sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.custom_texture sourcecraft.data 1
+execute unless score #healthindications.option.health_bar.status_effects sourcecraft.data matches 0.. run scoreboard players set #healthindications.option.health_bar.status_effects sourcecraft.data 1
 
 #start loops
 function healthindications.3:loop/per_tick
