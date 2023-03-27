@@ -39,5 +39,5 @@ execute unless entity @e[type=minecraft:text_display,tag=healthindications.healt
 #reset tags
 tag @e[type=minecraft:text_display,tag=healthindications.health_bar] remove healthindications.health_bar.execute
 
-#reset storage
-data remove storage healthindications health_bar.extra_info
+# #reset storage
+# data remove storage healthindications health_bar.extra_info

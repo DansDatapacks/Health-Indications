@@ -15,6 +15,10 @@ execute if entity @s[tag=healthindications.within_range] if score @s healthindic
 #check for status effects
 execute if score #healthindications.option.health_bar.toggle sourcecraft.data matches 1 if score #healthindications.option.health_bar.custom_texture sourcecraft.data matches 1 if score #healthindications.option.health_bar.status_effects sourcecraft.data matches 1 if entity @s[tag=!global.ignore,tag=!healthindications.ignore,tag=!healthindications.no_status_effects,tag=healthindications.check_status_effects] run function healthindications.2:status_effect/check_status_effect
 
+# prevent healthbars from showing on mobs with invisibility
+execute if predicate healthindications.2:status_effect/invisibility run scoreboard players reset @s healthindications.health_bar.update
+execute if predicate healthindications.2:status_effect/invisibility run function healthindications.2:health_bar/end_health_bar
+
 #update health related indications
 execute if score @s healthindications.health_bar.update matches 1 run function healthindications.2:health/mob_health_update
 
@@ -25,3 +29,6 @@ scoreboard players operation @s healthindications.absorption.previous = @s healt
 
 #reset temp scores
 scoreboard players reset @s healthindications.health_bar.update
+
+#reset storage
+data remove storage healthindications health_bar.extra_info
