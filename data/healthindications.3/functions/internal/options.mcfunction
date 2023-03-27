@@ -16,7 +16,7 @@ execute unless score #healthindications.option.damage_indication.toggle sourcecr
 #spacer
 execute if score #healthindications.option.damage_indication.toggle sourcecraft.data matches 1 run tellraw @s [{"text":"|","color":"gray"}]
 
-#stationary
+#affect
 execute if score #healthindications.option.damage_indication.toggle sourcecraft.data matches 1 if score #healthindications.option.damage_indication.affect_players sourcecraft.data matches 1 run tellraw @s [{"text":"|","color":"gray"},{"text":" "},{"text":"[Affect Players]","color":"green","clickEvent":{"action":"run_command","value":"/function healthindications.3:internal/option/damage_indication/affect_players"},"hoverEvent":{"action":"show_text","contents":[{"text":"Runs Damage Indications on Players (ON)","color":"gray"}]}}]
 execute if score #healthindications.option.damage_indication.toggle sourcecraft.data matches 1 unless score #healthindications.option.damage_indication.affect_players sourcecraft.data matches 1 run tellraw @s [{"text":"|","color":"gray"},{"text":" "},{"text":"[Affect Players]","color":"red","clickEvent":{"action":"run_command","value":"/function healthindications.3:internal/option/damage_indication/affect_players"},"hoverEvent":{"action":"show_text","contents":[{"text":"Runs Damage Indications on Players (OFF)","color":"gray"}]}}]
 
