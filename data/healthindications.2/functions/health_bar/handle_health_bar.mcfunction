@@ -7,10 +7,10 @@ scoreboard players operation #healthindications.health_bar_ID sourcecraft.temp =
 execute as @e[type=!#sourcecraft.5:no_health] unless entity @s[gamemode=creative] unless entity @s[gamemode=spectator] if score @s sourcecraft.ID = #healthindications.health_bar_ID sourcecraft.temp run tag @s add healthindications.found_entity
 
 # check if dismounted (horses like to dismount any entity riding it)
-execute if score #healthindications.option.health_bar.better_sync sourcecraft.data matches 1 on vehicle run scoreboard players set #healthindications.health_bar.mounted sourcecraft.temp 1
+execute if score #healthindications.option.health_bar.better_sync sourcecraft.data matches 1 unless entity @s[tag=healthindications.health_bar.better_sync.ignore] on vehicle run scoreboard players set #healthindications.health_bar.mounted sourcecraft.temp 1
 
 # check if can be mounted (if u cant remount, then make it a tp text entity instead of a riding text entity)
-execute if score #healthindications.option.health_bar.better_sync sourcecraft.data matches 1 if entity @s[tag=!healthindications.health_bar.better_sync.ignore] unless score #healthindications.health_bar.mounted sourcecraft.temp matches 1 store success score #healthindications.health_bar.ridable sourcecraft.temp run ride @s mount @e[type=!#sourcecraft.5:no_health,tag=healthindications.found_entity,limit=1]
+execute if score #healthindications.option.health_bar.better_sync sourcecraft.data matches 1 unless entity @s[tag=healthindications.health_bar.better_sync.ignore] unless score #healthindications.health_bar.mounted sourcecraft.temp matches 1 store success score #healthindications.health_bar.ridable sourcecraft.temp run ride @s mount @e[type=!#sourcecraft.5:no_health,tag=healthindications.found_entity,limit=1]
 execute if score #healthindications.option.health_bar.better_sync sourcecraft.data matches 1 if score #healthindications.health_bar.ridable sourcecraft.temp matches 0 run tag @s add healthindications.health_bar.better_sync.ignore
 
 # #find entity head
