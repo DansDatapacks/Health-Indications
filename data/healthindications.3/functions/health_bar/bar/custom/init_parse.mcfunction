@@ -12,10 +12,11 @@ scoreboard players set #healthindications.loop sourcecraft.temp 10
 function healthindications.3:health_bar/bar/custom/generate_string
 
 #add absorption hearts
-execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" "},{"score":{"name":"#healthindications.current_absorption","objective":"sourcecraft.temp"}},{"font":"healthindications:health_bar","translate":"icon.healthindications.health_bar.absorption_heart","color":"white"}]'}
+execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data modify storage healthindications:health_bar temp append value '{"text":" ","font":"minecraft:default"}'
+execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data modify storage healthindications:health_bar temp append value '{"score":{"name":"#healthindications.current_absorption","objective":"sourcecraft.temp"},"font":"minecraft:default"}'
+execute if score #healthindications.current_absorption sourcecraft.temp matches 1.. run data modify storage healthindications:health_bar temp append value '{"font":"healthindications:health_bar","translate":"icon.healthindications.health_bar.absorption_heart","color":"white"}'
 
 ##modules
-#add space
-execute unless score #healthindications.current_absorption sourcecraft.temp matches 1.. if data storage healthindications health_bar.extra_info run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" "}]'}
 #add extra info set by other packs
-execute if data storage healthindications health_bar.extra_info run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"nbt":"health_bar.extra_info[]","storage":"healthindications","interpret":true,"separator":""}]'}
+execute if data storage healthindications health_bar.extra_info run data modify storage healthindications:health_bar temp append value '{"text":" ","font":"minecraft:default"}'
+execute if data storage healthindications health_bar.extra_info run data modify storage healthindications:health_bar temp append value '{"storage":"healthindications","nbt":"health_bar.extra_info[]","interpret":true,"separator":""}'

@@ -10,7 +10,7 @@ execute unless score #healthindications.current_percent sourcecraft.temp > #heal
 execute unless score #healthindications.current_percent sourcecraft.temp > #healthindications.half_of_interval sourcecraft.temp unless score #healthindications.current_percent sourcecraft.temp matches 1.. run function healthindications.3:health_bar/bar/custom/slot/empty
 
 #add negative space
-execute if score #healthindications.loop sourcecraft.temp matches 1.. run data merge block ~ ~ ~ {Text1:'[{"nbt":"Text1","block":"~ ~ ~","interpret":"true"},{"font":"space:default","translate":"space.-1"}]'}
+execute if score #healthindications.loop sourcecraft.temp matches 1.. run data modify storage healthindications:health_bar temp append value '{"font":"space:default","translate":"space.-1"}'
 
 #update position through the bar
 scoreboard players operation #healthindications.current_percent sourcecraft.temp -= #healthindications.interval sourcecraft.temp

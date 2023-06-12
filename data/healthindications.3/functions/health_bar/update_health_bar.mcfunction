@@ -1,14 +1,14 @@
 # update health bar
 
-#init nbt sign
-function #sourcecraft:start_nbt_sign
-
 #init parse
-execute if score #healthindications.option.health_bar.custom_texture sourcecraft.data matches 1 at @e[type=minecraft:marker,tag=sourcecraft.nbt_sign] run function healthindications.3:health_bar/bar/custom/init_parse
-execute unless score #healthindications.option.health_bar.custom_texture sourcecraft.data matches 1 at @e[type=minecraft:marker,tag=sourcecraft.nbt_sign] run function healthindications.3:health_bar/bar/simple/init_parse
+execute if score #healthindications.option.health_bar.custom_texture sourcecraft.data matches 1 run function healthindications.3:health_bar/bar/custom/init_parse
+execute unless score #healthindications.option.health_bar.custom_texture sourcecraft.data matches 1 run function healthindications.3:health_bar/bar/simple/init_parse
+
+# DEBUG
+# tellraw @a {"nbt":"temp[]","storage":"healthindications:health_bar"}
 
 #set name to parsed string
-execute at @e[type=minecraft:marker,tag=sourcecraft.nbt_sign] run data modify entity @s text set from block ~ ~ ~ Text1
+data modify entity @s text set value '{"storage":"healthindications:health_bar","nbt":"temp[]","interpret":true,"separator":""}'
 
-#end nbt sign
-function #sourcecraft:end_nbt_sign
+# reset temp
+data remove storage healthindications:health_bar temp
