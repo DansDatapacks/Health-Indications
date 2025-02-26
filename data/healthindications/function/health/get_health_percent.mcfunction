@@ -1,7 +1,7 @@
 # calculate percent of health compared to max of executor
 
 #get max health
-execute store result score #healthindications.current_max_health healthindications.temp run attribute @s minecraft:generic.max_health get
+execute store result score #healthindications.current_max_health healthindications.temp run attribute @s minecraft:max_health get
 
 #get current health
 scoreboard players operation #healthindications.current_health healthindications.temp = @s healthindications.health

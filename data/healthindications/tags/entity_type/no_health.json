@@ -1,7 +1,7 @@
 {
   "values": [
     "minecraft:area_effect_cloud",
-    "minecraft:boat",
+    "#minecraft:boat",
     "minecraft:minecart",
     "minecraft:chest_minecart",
     "minecraft:furnace_minecart",
