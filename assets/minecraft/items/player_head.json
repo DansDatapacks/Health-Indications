@@ -1,0 +1,27 @@
+{
+	"model": {
+		"type": "minecraft:select",
+		"property": "minecraft:custom_model_data",
+		"fallback": {
+			"type": "minecraft:special",
+			"base": "minecraft:item/template_skull",
+			"model": {
+				"type": "minecraft:head",
+				"kind": "player"
+			}
+		},
+		"cases": [
+			{
+				"when": "flat",
+				"model": {
+					"type": "minecraft:special",
+					"base": "healthindications:item/flat_template_skull",
+					"model": {
+						"type": "minecraft:head",
+						"kind": "player"
+					}
+				}
+			}
+		]
+	}
+}

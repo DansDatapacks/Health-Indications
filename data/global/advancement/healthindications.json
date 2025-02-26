@@ -3,7 +3,9 @@
 		"icon": {
 			"id": "minecraft:player_head",
 			"components": {
-				"minecraft:custom_model_data": 4150000,
+				"minecraft:custom_model_data": {
+					"strings": ["flat"]
+				},
 				"minecraft:profile": {
 					"properties": [
 						{

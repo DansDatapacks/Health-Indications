@@ -1,5 +1,5 @@
 {
-	"parent": "builtin/entity",
+	"parent": "minecraft:item/template_skull",
 	"gui_light": "front",
 	"display": {
 		"gui": {
