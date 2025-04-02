@@ -4,7 +4,7 @@
 scoreboard players operation #healthindications.entity_ID healthindications.temp = @s healthindications.ID
 
 #spawn new health bar
-execute anchored eyes run summon minecraft:text_display ~ ~ ~ {Tags:["healthindications.health_bar","healthindications.health_bar.execute","global.ignore"],shadow_radius:0f,shadow_strength:0f,text_opacity:255,default_background:0b,shadow:0b,see_through:0b,alignment:"center",text:'{"text":""}',billboard:"center",background:16777215,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[1f,1f,1f]}}
+execute anchored eyes run summon minecraft:text_display ~ ~ ~ {Tags:["healthindications.health_bar","healthindications.health_bar.execute","global.ignore"],shadow_radius:0f,shadow_strength:0f,text_opacity:255,default_background:0b,shadow:0b,see_through:0b,alignment:"center",billboard:"center",background:16777215,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[1f,1f,1f]}}
 
 #sync ID
 scoreboard players operation @e[type=minecraft:text_display,tag=healthindications.health_bar.execute,limit=1] healthindications.health_bar.ID = #healthindications.entity_ID healthindications.temp
